@@ -45,6 +45,7 @@ const loginCP = {
         })
     },
     login: (req,res)=>{
+        console.log(req.body)
         const username = req.params.username;
         const {password} = req.body
         const client = new Client(config)

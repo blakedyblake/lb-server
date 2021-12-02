@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require('cors')
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("public"));//Without this deployment doesn't work
+app.use(express.json())//Without this post requests don't work
 app.use(cors())
 
 
